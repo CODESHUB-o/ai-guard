@@ -22,4 +22,5 @@ jobs:
 
       - name: Run AI Guard
         run: |
-          ./target/release/ai_guard multiturn example.txt --threshold 60
+          - name: Run AI Guard
+  run: ./target/release/ai_guard multiturn examples/sample.txt --threshold 60
