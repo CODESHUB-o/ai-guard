@@ -1,0 +1,25 @@
+name: AI Guard Scan
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  ai-guard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build AI Guard
+        run: cargo build --release
+
+      - name: Run AI Guard
+        run: |
+          ./target/release/ai_guard multiturn example.txt --threshold 60
