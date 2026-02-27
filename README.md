@@ -91,7 +91,7 @@ Late Detection       : false
 Threshold Gaming     : false
 Composite Risk Score : 72
 Risk Level           : High
-CI Threshold         : 60
+CI Threshold         : 95
 ```
 
 ---
