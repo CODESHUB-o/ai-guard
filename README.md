@@ -68,7 +68,7 @@ target/release/ai_guard
 Analyze a transcript:
 
 ```bash
-./target/release/ai_guard multiturn examples/sample.txt --threshold 60
+./target/release/ai_guard multiturn examples/sample.txt --threshold 95
 ```
 
 If the composite risk score is greater than or equal to the threshold,  
@@ -99,7 +99,7 @@ CI Threshold         : 60
 ## JSON Output (CI Friendly)
 
 ```bash
-./target/release/ai_guard multiturn transcript.txt --threshold 60 --json
+./target/release/ai_guard multiturn transcript.txt --threshold 95 --json
 ```
 
 Example:
@@ -132,7 +132,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - run: cargo build --release
-      - run: ./target/release/ai_guard multiturn examples/sample.txt --threshold 60
+      - run: ./target/release/ai_guard multiturn examples/sample.txt --threshold 95
 ```
 
 This will fail CI if behavioral risk exceeds the defined threshold.
