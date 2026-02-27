@@ -50,7 +50,7 @@ It is **behavioral**, not just pattern-based.
 ### Build from Source
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-guard.git
+git clone https://github.com/CODESHUB-O/ai-guard.git
 cd ai-guard
 cargo build --release
 ```
